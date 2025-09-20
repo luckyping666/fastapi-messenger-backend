@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import Integer, String, DateTime, Boolean, ForeignKey, func
-from db.base import Base
+from app.db.base import Base
 
 
 class Message(Base):
