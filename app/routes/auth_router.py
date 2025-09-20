@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.schemas.auth_schema import RegisterRequest, LoginRequest, TokenRefreshRequest, LogoutRequest
-from core.dependencies import get_auth_service
-from core.security.token_service import TokenService
-from services.auth_service import AuthService
+from app.core.dependencies import get_auth_service
+from app.core.security.token_service import TokenService
+from app.services.auth_service import AuthService
 
 
 router = APIRouter(prefix="/auth", tags=["auth"])

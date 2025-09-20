@@ -1,14 +1,11 @@
 from fastapi import Depends
 from sqlalchemy.orm import Session
 from app.db.db import get_db
-from core.security.password_service import PasswordService
-from core.security.token_service import TokenService
-from services.auth_service import AuthService
+from app.core.security.password_service import PasswordService
+from app.core.security.token_service import TokenService
+from app.services.auth_service import AuthService
 
 
-# -------------------
-# Сервисы
-# -------------------
 def get_password_service() -> PasswordService:
     return PasswordService()
 

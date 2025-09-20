@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 from typing import Generator
-from core.config import settings
+from app.core.config import settings
 
 # Создаём движок
 engine = create_engine(

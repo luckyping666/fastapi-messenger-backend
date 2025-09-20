@@ -1,10 +1,10 @@
 from datetime import datetime, timedelta
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
-from core.security.password_service import PasswordService
-from core.security.token_service import TokenService
-from repositories.user_repository import UserRepository
-from repositories.token_repository import TokenRepository
+from app.core.security.password_service import PasswordService
+from app.core.security.token_service import TokenService
+from app.repositories.user_repository import UserRepository
+from app.repositories.token_repository import TokenRepository
 from app.models.user_model import User
 
 
