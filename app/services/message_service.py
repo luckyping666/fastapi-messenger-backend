@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from repositories.message_repository import MessageRepository
+from app.repositories.message_repository import MessageRepository
 from app.models.message_model import Message
 from typing import List, Optional
 

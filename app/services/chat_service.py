@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from repositories.chat_repository import ChatRepository
+from app.repositories.chat_repository import ChatRepository
 from app.models.chat_model import Chat
 from typing import List, Optional
 
