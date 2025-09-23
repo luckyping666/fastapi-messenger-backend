@@ -31,7 +31,7 @@ def get_user_chats(
     return service.get_user_chats(current_user.id)
 
 
-@router.get("/{chat_id}", response_model=ChatResponse)
+@router.get("/{chat_id}/messages", response_model=ChatResponse)
 def get_chat_by_id(
     chat_id: int,
     db: Session = Depends(get_db),
