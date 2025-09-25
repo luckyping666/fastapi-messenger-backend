@@ -8,7 +8,7 @@ class MessageRepository:
         self.db = db
 
     def create_message(self, chat_id: int, sender_id: int, content: str) -> Message:
-        message = Message(chat_id=chat_id, sender_id=sender_id, content=content)
+        message = Message(chat_id=chat_id, author_id=sender_id, content=content)
         self.db.add(message)
         self.db.commit()
         self.db.refresh(message)

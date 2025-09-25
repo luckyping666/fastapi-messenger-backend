@@ -11,12 +11,13 @@ from app.models.user_model import User
 router = APIRouter(prefix="/messages", tags=["messages"])
 
 
-@router.post("/", response_model=MessageResponse)
+@router.post("/send", response_model=MessageResponse)
 def send_message(
     data: MessageCreateRequest,
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
+    print('Папали')
     service = MessageService(db)
     return service.send_message(data.chat_id, current_user.id, data.content)
 

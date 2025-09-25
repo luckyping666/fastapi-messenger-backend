@@ -10,10 +10,8 @@ class MessageCreateRequest(BaseModel):
 class MessageResponse(BaseModel):
     id: int
     chat_id: int
-    sender_id: int
     content: str
+    author_id: int  # <-- здесь мы будем использовать author_id из модели
     created_at: datetime
-
-    class Config:
-        from_attributes = True
+    is_read: bool
 

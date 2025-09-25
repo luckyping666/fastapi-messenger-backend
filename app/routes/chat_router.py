@@ -41,4 +41,15 @@ def get_chat_by_id(
     chat = service.get_chat_by_id(chat_id)
     if not chat:
         raise HTTPException(status_code=404, detail="Chat not found")
-    return chat
+    return {
+    "id": chat.id,
+    "user1_id": chat.user1_id,
+    "user2_id": chat.user2_id,
+    "messages": [
+            {
+                "id": m.id, 
+                "content": m.content, 
+                "sender_id": m.sender_id
+            } for m in chat.messages
+        ],
+    }
